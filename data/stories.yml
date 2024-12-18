@@ -1,0 +1,48 @@
+version: "3.1"
+
+stories:
+
+- story: greet and ckd info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inquire_ckd
+  - action: utter_ckd_info
+
+- story: request symptoms and provide results (positive)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_request_symptoms
+  - intent: affirm
+  - action: utter_results_affirm
+
+- story: request symptoms and provide results (negative)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_request_symptoms
+  - intent: deny
+  - action: utter_results_deny
+
+- story: handle mood
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: predict CKD
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: action_predict_ckd
+
+- story: explain CKD
+  steps:
+  - intent: inquire_ckd
+  - action: action_explain_ckd

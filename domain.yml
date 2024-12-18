@@ -1,0 +1,89 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - inquire_ckd
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+actions:
+  - action_predict_ckd
+  - action_explain_ckd
+
+slots:
+  age:
+    type: float
+    mappings:
+      - type: from_text
+  bp:
+    type: float
+    mappings:
+      - type: from_text
+  sg:
+    type: float
+    mappings:
+      - type: from_text
+  al:
+    type: float
+    mappings:
+      - type: from_text
+  su:
+    type: float
+    mappings:
+      - type: from_text
+  rbc:
+    type: text
+    mappings:
+      - type: from_text
+  pc:
+    type: text
+    mappings:
+      - type: from_text
+  pcc:
+    type: text
+    mappings:
+      - type: from_text
+  ba:
+    type: text
+    mappings:
+      - type: from_text
+
+responses:
+  utter_greet:
+  - text: "Hello! How can I assist you today?"
+
+  utter_goodbye:
+  - text: "Goodbye! Take care."
+
+  utter_iamabot:
+  - text: "I am a bot here to assist you with CKD-related inquiries."
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great! Let me know if there’s anything else I can help with."
+
+  utter_ckd_info:
+  - text: "Chronic Kidney Disease (CKD) is a condition characterized by a gradual loss of kidney function. I can help predict CKD based on patient symptoms or provide more information if needed."
+
+  utter_request_symptoms:
+  - text: "Could you provide patient details or symptoms for analysis?"
+
+  utter_results_affirm:
+  - text: "Based on the inputs, the patient might have CKD. Please consult a healthcare provider for confirmation."
+
+  utter_results_deny:
+  - text: "Based on the inputs, the patient is unlikely to have CKD. However, regular checkups are recommended."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

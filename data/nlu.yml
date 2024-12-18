@@ -1,0 +1,68 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - hey there
+    - hi bot
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - take care
+    - see you
+    - bye bot
+
+- intent: affirm
+  examples: |
+    - yes
+    - sure
+    - absolutely
+    - that's correct
+    - of course
+    - indeed
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not really
+    - I don't think so
+
+- intent: inquire_ckd
+  examples: |
+    - What is CKD?
+    - Can you tell me about Chronic Kidney Disease?
+    - I want to know about CKD
+    - Tell me about kidney diseases
+    - Can you explain CKD?
+
+- intent: mood_great
+  examples: |
+    - I feel great
+    - I am happy
+    - I'm doing well
+    - Feeling awesome
+    - Things are perfect
+
+- intent: mood_unhappy
+  examples: |
+    - I'm not doing well
+    - I feel sad
+    - Not feeling good
+    - Feeling down
+    - I am unhappy
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a real person?
+    - am I talking to a human?
+    - are you an AI?

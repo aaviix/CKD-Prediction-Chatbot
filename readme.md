@@ -61,7 +61,7 @@ rasa run
 In a third terminal:
 
 ```bash
-streamlit run app.py
+streamlit run rasa-app.py
 ```
 
 ### Access the Application
